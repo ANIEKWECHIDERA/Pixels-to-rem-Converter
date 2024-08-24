@@ -32,7 +32,7 @@ body {
 }
 
 h1 {
-  margin: 8rem 2rem auto;
+  margin: 6rem 2rem auto;
   font-weight: 200;
   font-size: 6rem;
   color: white;
@@ -82,12 +82,14 @@ h1::before {
   transition: all 250ms ease-out;
 }
 
-/* .input::before {
+.input::before {
   content: 'Input';
   font-size: 1.5rem;
   color: white;
   font-weight: 100;
   margin-right: 100px;
+  position: absolute;
+  left: -80px;
 }
 
 .output::before {
@@ -96,7 +98,9 @@ h1::before {
   color: white;
   font-weight: 100;
   margin-right: 100px;
-} */
+  position: absolute;
+  left: -100px;
+}
 
 .swtch-btn {
   margin: 30px auto;
@@ -136,7 +140,12 @@ h1::before {
 
   background-color: rgba(0, 0, 0, 0.205);
   backdrop-filter: blur(30px);
-} */
+  } */
+
+label {
+  font-weight: 200;
+  margin-right: 30px;
+}
 
 label::before {
   content: '';
@@ -146,13 +155,8 @@ label::before {
   bottom: 0;
   width: 1px;
   height: 70%;
-  margin: auto 0;
+  margin: 10px;
   background-color: rgba(255, 255, 255, 0.26);
-}
-
-label {
-  font-weight: 200;
-  margin-right: 30px;
 }
 
 .copy-btn {
@@ -195,4 +199,70 @@ input[type='number']::-webkit-outer-spin-button {
 .conv-group {
   margin: auto 0;
   width: 700px;
+}
+
+@media screen and (max-width: 47.9375rem) {
+  .main-container {
+    width: 90%; /* Reduce the width for smaller screens */
+    margin: 0 auto;
+  }
+
+  .conv-cont {
+    margin-top: 3rem;
+    padding: 10px;
+    height: auto; /* Let the height adjust automatically */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Reduce font size for smaller screens */
+    margin: 3rem 1rem auto;
+  }
+
+  h1::before {
+    width: 40px;
+
+    font-size: 0.5rem;
+  }
+
+  .input,
+  .output {
+    width: 280px; /* Make the input and output fields take up more width on mobile */
+    margin: 20px auto; /* Reduce margin for smaller screens */
+    font-size: 1rem; /* Reduce font size for better visibility */
+  }
+
+  .input::before,
+  .output::before {
+    font-size: 1rem; /* Adjust label font size */
+    left: 10px; /* Adjust position to fit smaller screens */
+    margin-right: 20px; /* Adjust margin */
+  }
+
+  .copy-btn {
+    font-size: 1rem; /* Reduce button font size */
+    padding: 15px 40px; /* Adjust padding for smaller buttons */
+  }
+
+  input {
+    font-size: 1.2rem; /* Adjust input text size */
+    width: 90%; /* Make the input field more flexible */
+    height: 60px; /* Reduce height to fit mobile screens */
+    padding: 15px; /* Adjust padding */
+    width: 100px;
+    margin-right: 50px;
+  }
+
+  .conv-group {
+    width: 100%; /* Make conv-group full width */
+    padding: 0 10px; /* Add some padding */
+  }
+
+  label::before {
+    right: 60px; /* Adjust the position of the divider line */
+    box-sizing: border-box;
+  }
+
+  label {
+    margin-right: -60px;
+  }
 }
