@@ -12,6 +12,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
 }
 
 .main-container {
@@ -216,12 +217,20 @@ input[type='number']::-webkit-outer-spin-button {
   h1 {
     font-size: 1.5rem; /* Reduce font size for smaller screens */
     margin: 3rem 1rem auto;
+    display: block;
   }
 
   h1::before {
+    position: relative;
     width: 40px;
-
+    top: 30px;
+    right: 10px;
     font-size: 0.5rem;
+  }
+
+  h1 span {
+    padding: 0;
+    margin: 0;
   }
 
   .input,
