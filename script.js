@@ -73,3 +73,21 @@ input.addEventListener('input', () => {
   inputValue = input.value;
   outputValue = output.value;
 });
+
+//implementing the copy button
+const copyToClipboard = () => {
+  navigator.clipboard
+    .writeText(output.value)
+    .then(() => {
+      // Optional: Provide feedback to the user
+      copyBtn.textContent = 'Copied!';
+      setTimeout(() => {
+        copyBtn.textContent = 'Copy';
+      }, 2000);
+    })
+    .catch(err => {
+      console.error('Failed to copy text: ', err);
+    });
+};
+
+copyBtn.addEventListener('click', copyToClipboard);

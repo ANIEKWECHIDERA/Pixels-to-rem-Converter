@@ -109,7 +109,7 @@ h1::before {
   color: white;
   transition: all 250ms ease-out;
   border: none;
-  box-shadow: 0 -10px 30px 0px rgba(0, 0, 0, 0.212);
+  /* box-shadow: 0 -10px 30px 0px rgba(0, 0, 0, 0.212); */
 }
 
 .swtch-btn:hover,
@@ -121,7 +121,7 @@ h1::before {
 .copy-btn:active {
   background-color: #2526275b;
   transition: all 30ms ease;
-  box-shadow: 0 -10px 30px 5px rgba(0, 0, 0, 0.212);
+  /* box-shadow: 0 -10px 30px 5px rgba(0, 0, 0, 0.212); */
 }
 
 /* .output {
@@ -142,13 +142,12 @@ label::before {
   content: '';
   display: block;
   position: absolute;
-  right: 80px; /* Positioning the line close to the unit text */
-  top: 0;
+  right: 80px;
   bottom: 0;
   width: 1px;
   height: 70%;
   margin: auto 0;
-  background-color: rgba(255, 255, 255, 0.26); /* Light line color */
+  background-color: rgba(255, 255, 255, 0.26);
 }
 
 label {
@@ -168,7 +167,7 @@ label {
   color: white;
   transition: all 250ms ease-out;
   border: none;
-  box-shadow: 0 -10px 30px 0px rgba(0, 0, 0, 0.212);
+  /* box-shadow: 0 -10px 30px 0px rgba(0, 0, 0, 0.212); */
 }
 
 input {
