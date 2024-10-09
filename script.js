@@ -31,7 +31,7 @@ const convertToPx = () => {
   output.value = conv;
 };
 
-// dispaying the input and output state
+// displaying the input and output state
 const stateValue = () => {
   input.value = inputValue;
   output.value = outputValue;
